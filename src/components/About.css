@@ -1,0 +1,172 @@
+.about {
+  width: 100%;
+  padding: 120px 0;
+  background: #fff;
+  color: #0f0f0f;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.about__text {
+  flex: 1;
+}
+
+.about__text h2 {
+  font-size: 38px;
+  margin-bottom: 24px;
+}
+
+.about__text p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.about__btn {
+  padding: 14px 30px;
+  background: #f5c518;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about__btn:hover {
+  background: #ffd84d;
+}
+
+/* =========================
+   IMAGE SLIDER
+========================= */
+
+.about__image {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Estado base (fuera de pantalla a la derecha) */
+.about__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transform: translateX(100%);
+  transition: transform 0.8s cubic-bezier(.77,0,.18,1);
+}
+
+/* Imagen activa (visible) */
+.about__slide.active {
+  transform: translateX(0);
+  z-index: 2;
+}
+
+/* Imagen anterior (sale hacia la izquierda) */
+.about__slide.prev {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .about__container {
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  .about__text h2 {
+    font-size: 32px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .about__container {
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about__text h2 {
+    font-size: 28px;
+  }
+
+  .about__text p {
+    font-size: 15px;
+  }
+
+  .about__btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Un poco más cuadrado en mobile */
+  .about__image {
+    aspect-ratio: 1 / 1;
+  }
+
+}
+
+/* =========================
+   MOBILE PEQUEÑO
+========================= */
+
+@media (max-width: 480px) {
+
+  .about {
+    padding: 60px 0;
+  }
+
+  .about__text h2 {
+    font-size: 24px;
+  }
+
+  .about__text p {
+    font-size: 14px;
+  }
+
+}

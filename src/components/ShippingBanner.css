@@ -1,0 +1,65 @@
+.shippingBanner {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.shippingBanner__track {
+  display: flex;
+  width: max-content;
+  animation: scrollBanner 25s linear infinite;
+}
+
+.shippingBanner__content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 12px 60px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.shippingBanner__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shippingBanner__icon {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.shippingBanner__separator {
+  opacity: 0.3;
+}
+
+.shippingBanner__phone {
+  font-weight: 500;
+}
+
+@keyframes scrollBanner {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shippingBanner__content {
+    font-size: 13px;
+    padding: 10px 40px;
+    gap: 25px;
+  }
+
+  .shippingBanner__icon {
+    font-size: 14px;
+  }
+}
