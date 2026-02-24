@@ -62,53 +62,59 @@ Mensaje: ${formData.mensaje}
       style={{
         width: '100%',
         padding: '120px 20px',
-        background: '#ffffff',
-        color: '#111',
+        background: '#000',
+        color: '#fff',
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'translateY(0px)' : 'translateY(60px)',
         transition: 'all 0.9s ease',
       }}
     >
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+        
         <h2
           style={{
             textAlign: 'center',
             fontSize: '2.5rem',
-            marginBottom: '60px',
+            marginBottom: '30px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             gap: '12px',
+            fontWeight: '700',
+            letterSpacing: '1px'
           }}
         >
-          <FiMapPin size={26} color="#f1c40f" />
+          <FiMapPin size={28} color="#99123e" />
           Contacto
         </h2>
+
         <p
-  style={{
-    textAlign: 'center',
-    maxWidth: '650px',
-    margin: '0 auto 60px auto',
-    fontSize: '1.1rem',
-    lineHeight: '1.6',
-    color: '#444',
-  }}
->
-  Hablemos de tu próximo proyecto,{' '}
-  <span style={{ color: '#f1c40f', fontWeight: '600' }}>
-    solicitá tu presupuesto sin compromiso.
-  </span>
-</p>
+          style={{
+            textAlign: 'center',
+            maxWidth: '650px',
+            margin: '0 auto 60px auto',
+            fontSize: '1.1rem',
+            lineHeight: '1.7',
+            color: '#ccc',
+          }}
+        >
+          Hablemos de tu próximo proyecto,{' '}
+          <span style={{ color: '#99123e', fontWeight: '600' }}>
+            solicitá tu presupuesto sin compromiso.
+          </span>
+        </p>
+
         <form
           onSubmit={handleSubmit}
           style={{
             display: 'flex',
             flexDirection: 'column',
             gap: '25px',
-            background: '#fff',
+            background: '#111',
             padding: '50px',
             borderRadius: '20px',
-            boxShadow: '0 15px 40px rgba(0,0,0,0.08)',
+            border: '1px solid #222',
+            boxShadow: '0 15px 40px rgba(0,0,0,0.6)',
           }}
         >
           <input
@@ -143,24 +149,15 @@ Mensaje: ${formData.mensaje}
 
           <button
             type="submit"
-            style={{
-              padding: '16px',
-              borderRadius: '12px',
-              border: 'none',
-              background: '#f1c40f',
-              color: '#000',
-              fontWeight: '600',
-              cursor: 'pointer',
-              fontSize: '1rem',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 8px 20px rgba(241,196,15,0.4)',
+            style={buttonStyle}
+            onMouseOver={(e) => {
+              e.target.style.transform = 'translateY(-4px)'
+              e.target.style.boxShadow = '0 15px 30px rgba(153,18,62,0.4)'
             }}
-            onMouseOver={(e) =>
-              (e.target.style.transform = 'translateY(-3px)')
-            }
-            onMouseOut={(e) =>
-              (e.target.style.transform = 'translateY(0)')
-            }
+            onMouseOut={(e) => {
+              e.target.style.transform = 'translateY(0)'
+              e.target.style.boxShadow = '0 8px 20px rgba(153,18,62,0.3)'
+            }}
           >
             Enviar por WhatsApp
           </button>
@@ -173,12 +170,25 @@ Mensaje: ${formData.mensaje}
 const inputStyle = {
   padding: '16px',
   borderRadius: '12px',
-  border: '1px solid #ddd',
-  background: '#fafafa',
-  color: '#111',
+  border: '1px solid #222',
+  background: '#000',
+  color: '#fff',
   outline: 'none',
   fontSize: '1rem',
   transition: 'all 0.3s ease',
+}
+
+const buttonStyle = {
+  padding: '16px',
+  borderRadius: '12px',
+  border: 'none',
+  background: '#99123e',
+  color: '#fff',
+  fontWeight: '600',
+  cursor: 'pointer',
+  fontSize: '1rem',
+  transition: 'all 0.3s ease',
+  boxShadow: '0 8px 20px rgba(153,18,62,0.3)',
 }
 
 export default Contacto

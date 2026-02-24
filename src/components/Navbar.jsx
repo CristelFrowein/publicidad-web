@@ -7,11 +7,9 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar__logo">
-      <span className="logo__main">GRAZIANI</span>
-      <span className="logo__sub">V Í A  P Ú B L I C A</span>
-      </div>
-
+    <Link to="/" className="navbar__logo">
+  <img src="/logo.png" alt="Graziani Vía Pública" className="navbar__logo-img" />
+</Link>
       <div 
         className={`navbar__hamburger ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
@@ -23,7 +21,7 @@ function Navbar() {
 
       <ul className={`navbar__links ${menuOpen ? "active" : ""}`}>
         <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/servicios">Ubicaciones</Link></li>
+        <li><Link to="/Ubicaciones">Ubicaciones</Link></li>
         <li><Link to="/proyectos">Proyectos</Link></li>
         <li><Link to="/contacto">Contacto</Link></li>
       </ul>

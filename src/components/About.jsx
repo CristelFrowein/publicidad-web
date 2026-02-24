@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from "react"
 import "./About.css"
 
 const images = [
-  "https://res.cloudinary.com/dh5wgvaas/image/upload/v1771221127/4_ri2lnw.png",
-  "https://res.cloudinary.com/dh5wgvaas/image/upload/v1771221129/5_hsntq5.png",
-  "https://res.cloudinary.com/dh5wgvaas/image/upload/v1771221128/6_vzmbcv.png",
+  "https://res.cloudinary.com/dh5wgvaas/image/upload/v1771888254/8a2db468-2291-47d8-9995-6a659e908ddf.png",
+  "https://res.cloudinary.com/dh5wgvaas/image/upload/v1771966163/72622810-da53-419b-a0b8-1b88b3f7cafa.png",
+  "https://res.cloudinary.com/dh5wgvaas/image/upload/v1771966410/7477abb0-88c6-4d9a-902c-51cc0035ec1e.png",
+  "https://res.cloudinary.com/dh5wgvaas/image/upload/v1771966564/6df1a388-3c29-4e76-8589-6cf6db101fd6.png",
 ]
 
 function About() {

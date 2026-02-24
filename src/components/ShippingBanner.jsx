@@ -15,7 +15,7 @@ function ShippingBanner() {
 
       <span className="shippingBanner__item shippingBanner__phone">
         <FaWhatsapp className="shippingBanner__icon" />
-        Consultanos al 11 2345-6789
+        Consultanos al 2234265455
       </span>
     </div>
   )

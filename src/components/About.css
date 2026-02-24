@@ -1,8 +1,8 @@
 .about {
   width: 100%;
   padding: 120px 0;
-  background: #fff;
-  color: #0f0f0f;
+  background: #000;
+  color: #fff;
 
   opacity: 0;
   transform: translateY(40px);
@@ -39,25 +39,31 @@
 .about__text h2 {
   font-size: 38px;
   margin-bottom: 24px;
+  color: #fff;
+  font-weight: 600;
 }
 
 .about__text p {
   margin-bottom: 20px;
   line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
 }
 
+/* Botón clásico bordó */
 .about__btn {
   padding: 14px 30px;
-  background: #f5c518;
-  border: none;
-  font-weight: bold;
+  background: #99123e;
+  color: #fff;
+  border: 1px solid #99123e;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .about__btn:hover {
-  background: #ffd84d;
+  background: #7f0f33; /* Bordó más profundo */
+  border-color: #7f0f33;
 }
 
 /* =========================
@@ -70,10 +76,10 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 0; /* más sobrio */
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Estado base (fuera de pantalla a la derecha) */
 .about__slide {
   position: absolute;
   inset: 0;
@@ -85,13 +91,11 @@
   transition: transform 0.8s cubic-bezier(.77,0,.18,1);
 }
 
-/* Imagen activa (visible) */
 .about__slide.active {
   transform: translateX(0);
   z-index: 2;
 }
 
-/* Imagen anterior (sale hacia la izquierda) */
 .about__slide.prev {
   transform: translateX(-100%);
   z-index: 1;
@@ -144,7 +148,6 @@
     max-width: 320px;
   }
 
-  /* Un poco más cuadrado en mobile */
   .about__image {
     aspect-ratio: 1 / 1;
   }
